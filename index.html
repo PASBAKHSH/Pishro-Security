@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امنیت منزل و محل کار</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      direction: rtl;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      display: block;
+      font-size: 25px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #444;
+      position: absolute;
+      top: 57px;
+      right: 0;
+      z-index: 100;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 10px;
+      border-top: 1px solid #555;
+      transition: background-color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #555;
+    }
+
+    .hero-section {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero-section p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .action-buttons a {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 10px;
+      background-color: #ff9800;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      font-size: 1.1em;
+    }
+
+    .action-buttons a:hover {
+      background-color: #f57c00;
+    }
+
+    #services {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    #services h2 {
+      color: #1a237e;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- === Header === -->
+  <header class="header">
+    <div class="logo">🔒 امنیت پیشرو</div>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="#services" onclick="closeMenu()">خدمات پس از فروش</a>
+        <a href="pages/visit_form.html" onclick="closeMenu()">درخواست بازدید</a>
+        <a href="pages/products.html" onclick="closeMenu()">محصولات</a>
+        <a href="tel:09300908581" onclick="closeMenu()">تماس با ما</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- === Hero Section === -->
+  <section class="hero-section">
+    <h1>امنیت منزل و محل کار شما، تخصص ماست</h1>
+    <p>ارائه راهکارهای نوین نظارتی و حفاظتی با بالاترین کیفیت</p>
+    <div class="action-buttons">
+      <a href="pages/products.html">مشاهده محصولات 🛒</a>
+      <a href="pages/visit_form.html">درخواست بازدید 🗓️</a>
+    </div>
+  </section>
+
+  <!-- === Services Section === -->
+  <section id="services">
+    <h2>خدمات ما</h2>
+    <p>ادامه محتوای صفحه اصلی...</p>
+  </section>
+
+  <!-- === Footer === -->
+  <footer>
+    <p>&copy; 2025 💡 امنیت پیشرو | کلیه حقوق محفوظ است.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
