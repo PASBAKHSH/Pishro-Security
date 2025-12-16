@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم درخواست بازدید - امن نگر</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f4f7f9;
+            padding: 20px;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="tel"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .radio-group, .checkbox-group {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            margin-right: 15px;
+            display: inline-block;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .input-container {
+            position: relative;
+        }
+        .input-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>🗓️ درخواست بازدید فنی - امن نگر 🏢</h1>
+    
+    <form id="visitForm">
+
+        <!-- بخش تعداد دوربین‌ها -->
+        <div class="form-group">
+            <label for="cams">📹 تعداد دوربین‌ها:</label>
+            <div class="input-container">
+                <input type="number" id="cams" name="cams" min="1" placeholder="تعداد دوربین‌های مورد نظر" required>
+                <span class="input-icon">📹</span>
+            </div>
+        </div>
+
+        <!-- بخش شماره تماس -->
+        <div class="form-group">
+            <label for="phone">📞 شماره تماس:</label>
+            <div class="input-container">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="شماره موبایل 10 یا 11 رقمی" required>
+                <span class="input-icon">📞</span>
+            </div>
+        </div>
+
+        <!-- بخش محل نصب (چک‌باکس) -->
+        <div class="form-group">
+            <label>🏠 محل نصب:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="location" value="منزل"> منزل</label>
+                <label><input type="checkbox" name="location" value="کارگاه"> کارگاه</label>
+                <label><input type="checkbox" name="location" value="اداره"> اداره</label>
+                <label><input type="checkbox" name="location" value="باغ"> باغ</label>
+            </div>
+        </div>
+
+        <!-- بخش تجهیزات تخصصی (رادیو باتن) -->
+        <div class="form-group">
+            <label>🔧 آیا تمایلی دارید متخصص تجهیزات را برایتان فراهم کند؟</label>
+            <div class="radio-group">
+                <label><input type="radio" name="expertRequest" value="بله" required> بله</label>
+                <label><input type="radio" name="expertRequest" value="خیر"> خیر</label>
+            </div>
+        </div>
+
+        <!-- بخش دزدگیر (رادیو باتن) -->
+        <div class="form-group">
+            <label>🚨 سیستم دزدگیر مورد نظر:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="alarmType" value="هوشمند سیم‌کارتی" required> دزدگیر هوشمند سیم‌کارتی</label>
+                <label><input type="radio" name="alarmType" value="معمولی"> دزدگیر معمولی</label>
+            </div>
+        </div>
+        
+        <!-- بخش آدرس -->
+        <div class="form-group">
+            <label for="address">📍 آدرس دقیق:</label>
+            <div class="input-container">
+                <input type="text" id="address" name="address" placeholder="آدرس کامل محل بازدید" required>
+                <span class="input-icon">📍</span>
+            </div>
+        </div>
+
+        <!-- دکمه ارسال (که قبلاً حذف شده بود و اکنون اضافه شد) -->
+        <button type="submit">ارسال فرم به تکنسین🚀</button>
+    </form>
+</div>
+
+<script>
+    // منطق جاوا اسکریپت (بدون تغییر در بخش رفع اشکال)
+    document.addEventListener('DOMContentLoaded', function() {
+        // این بخش برای اطمینان از اینکه فرم به درستی لود می‌شود، بدون تغییر باقی می‌ماند.
+    });
+
+    document.getElementById('visitForm').addEventListener('submit', function(event) {
+        // **رفع مشکل ۱ و ۲: جلوگیری از ریست و باز کردن واتساپ**
+        event.preventDefault(); // توقف ریست شدن فرم
+
+        // 1. جمع‌آوری داده‌ها
+        const cams = document.getElementById('cams').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        
+        // محل نصب (چک‌باکس)
+        const locationChecks = Array.from(document.querySelectorAll('input[name="location"]:checked'))
+                                   .map(cb => cb.value);
+        const locationText = locationChecks.length > 0 ? locationChecks.join('، ') : 'هیچ موردی انتخاب نشده است';
+
+        // انتخاب شده‌های رادیو باتن
+        const expertRequestElement = document.querySelector('input[name="expertRequest"]:checked');
+        const expertRequest = expertRequestElement ? expertRequestElement.value : 'انتخاب نشده';
+
+        const alarmElement = document.querySelector('input[name="alarmType"]:checked');
+        const alarmText = alarmElement ? alarmElement.value : 'انتخاب نشده';
+
+        // 2. ساختار پیام واتساپ
+        const messageText = `
+درخواست بازدید – شرکت امن نگر 🗓️
+
+*مشخصات اولیه*
+📹 تعداد دوربین: ${cams || 'وارد نشده'}
+📞 تلفن: ${phone || 'وارد نشده'}
+
+*محل نصب*
+🏠 محل: ${locationText}
+
+*گزینه‌های خدماتی*
+🔧 تجهیزات را شرکت فراهم کند: ${expertRequest}
+🚨 سیستم دزدگیر: ${alarmText}
+
+*محل بازدید*
+📍 آدرس: ${address || 'وارد نشده'}
+        `.trim();
+
+        // 3. ساخت لینک واتساپ و باز کردن آن
+        const whatsAppNumber = '989300908581'; // **حتماً شماره صحیح شرکت را اینجا قرار دهید**
+        const encodedMessage = encodeURIComponent(messageText);
+        const whatsAppLink = `https://api.whatsapp.com/send?phone=${whatsAppNumber}&text=${encodedMessage}`;
+
+        // باز کردن لینک واتساپ در تب جدید
+        window.open(whatsAppLink, '_blank');
+    });
+</script>
+
+</body>
+</html>
